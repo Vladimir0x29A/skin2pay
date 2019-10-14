@@ -19,7 +19,7 @@ async function connectTask(done) {
 
 function reloadTask(done) {
     src('views/index.html')
-        // .pipe(stripComments())
+        .pipe(stripComments())
         .pipe(dest('build'))
         .pipe(connect.reload());
     done();

@@ -767,7 +767,7 @@ footer .email {
         padding-bottom: 9px;
         margin-bottom: 0;
     }
-    header nav a { margin-left: 5px; }
+    /*header nav a { margin-left: 5px; }*/
 }
 @media (max-width: 699px ) {
     main section .items .item { padding: 3px; }
@@ -801,16 +801,16 @@ footer .email {
         padding-bottom: 20px;
         margin-bottom: 20px;
     }
-    header .logo {
+    /*header .logo {
         width: 100%;
         text-align: center;
-    }
-    header {
+    }*/
+    /*header {
         height: 170px;
         line-height: 75px;
-    }
+    }*/
     header nav {
-        width: 100%;
+        /*width: 100%;*/
         text-align: center;
     }
     main section.inner .url-form .verify {
@@ -843,9 +843,9 @@ footer .email {
         min-width: calc(100% - 20px);
     }
 }
-@media (max-width: 399px ) {
+@media (max-width: 500px ) {
     header nav a {
-        font-size: 0px;
+        font-size: 0;
     }
     header nav a img {
         margin-right: 0;

@@ -1,4 +1,4 @@
-<html lang="en" prefix="og: http://ogp.me/ns#">
+<html lang="en">
 <head>
     <title>SKIN2PAY</title>
     <meta charset="utf-8">
@@ -29,12 +29,64 @@
         <div class="logo"><a href="#"><img src="/assets/images/logo.png" alt=""></a></div>
         <nav class="">
             <a href="#" class="m-support"><img src="/assets/images/ico-support.png" alt="">Support</a>
+            <a href="#" class="m-support"><img src="/assets/images/ico-steam.png" alt="">Sign in through STEAM</a>
         </nav>
     </div>
 </header>
 
-<main id="SellModel">
-    <div class="container big">
+<main>
+    <div class="container">
+        <section class="profile">
+            <img class="profile__avatar" src="/assets/images/bafdfcdde4901b9711cea086218fdbd031be3ccd_full.jpg" alt="avatar">
+            <div class="profile__description">
+                <div class="profile__nickname">REN丶JOKER</div>
+                <div class="profile__balance">Your balance: <span class="profile__balance-span">$0.00 USD</span></div>
+            </div>
+            <div class="profile__description profile__description--break-1">
+                <div class="profile__tradeoffer profile-tradeoffer">
+                    <input type="text" class="profile-tradeoffer__input" placeholder="Enter your trade URL">
+                    <button class="button--default button--input button--ml">Save</button>
+                </div>
+            </div>
+            <div class="profile__description profile__description--break-1">
+                <div class="profile__paragraph paragraph paragraph--info">
+                    Before you will open cases please verify that your TRADE OFFER URL is working properly and your inventory is open.
+                    <a class="paragraph__link">View your trade offer URL</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="withdraw">
+            <div class="withdraw__title">Balance withdraw</div>
+            <div class="withdraw__methods withdraw-methods">
+                <div class="withdraw-methods__title">Withdraw methods:</div>
+                <div class="withdraw-methods__methods">
+                    <button class="button--dark withdraw-methods__button withdraw-methods__button--fs" title="Your balance will be credited to Farmskins.com">
+                        <img src="/assets/images/logo_fs.png" alt="">
+                    </button>
+                    <button class="button--dark withdraw-methods__button">
+                        <img src="/assets/images/crypto-bitcoin.png" alt="">
+                    </button>
+                    <button class="button--dark withdraw-methods__button active">
+                        <img src="/assets/images/crypto-bitcoin-cash.png" alt="">
+                    </button>
+                    <button class="button--dark withdraw-methods__button">
+                        <img src="/assets/images/crypto-ethereum.png" alt="">
+                    </button>
+                    <button class="button--dark withdraw-methods__button">
+                        <img src="/assets/images/crypto-litecoin.png" alt="">
+                    </button>
+                </div>
+                <div class="withdraw__input-block">
+                    <input class="withdraw__input" type="text" placeholder="Input your wallet">
+                </div>
+                <div class="withdraw__input-block">
+                    <input class="withdraw__input" type="text" placeholder="Input withdraw amount">
+                    <button class="button--default button--input button--ml">Withdraw</button>
+                </div>
+            </div>
+        </section>
+
         <section class="my-items f-left">
             <div class="total clearfix">
                 <div class="f-left">
