@@ -1,0 +1,210 @@
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+    <title>SKIN2PAY</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SKIN2PAY">
+    <meta property="og:title" content="SKIN2PAY">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--<meta id="csrf_token" name="csrf_token" content="8A8JsFP1iHB3jnI0Iu1W4txeRDaYaILvs3mdOl0P">-->
+    <link rel="shortcut icon" href="/assets/favicons/favicon.png">
+    <link href="orig.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+
+    <!--<script>
+        var global = {};
+        global.csrf = "8A8JsFP1iHB3jnI0Iu1W4txeRDaYaILvs3mdOl0P";
+    </script>-->
+</head>
+<body>
+
+<header>
+    <div class="container container--header">
+        <div class="logo"><a href="#"><img src="/assets/images/logo.png" alt=""></a></div>
+        <nav class="">
+            <a href="#" class="m-support"><img src="/assets/images/ico-support.png" alt="">Support</a>
+        </nav>
+    </div>
+</header>
+
+<main id="SellModel">
+    <div class="container big">
+        <section class="my-items f-left">
+            <div class="total clearfix">
+                <div class="f-left">
+                    Count of items: <span class="yellow" data-bind="text: itemsCount">0</span>
+                </div>
+                <div class="f-right">
+                    Total price: <span class="green">$<span data-bind="text: itemsPrice">0.00</span> USD</span>
+                </div>
+            </div>
+            <div class="search clearfix">
+                <form action="#">
+                    <div class="f-left">
+                        <input type="text" placeholder="Search items..." data-bind="textInput: searchText">
+                    </div>
+                </form>
+            </div>
+            <div class="items clearfix">
+                <!-- ko if: error() -->
+                <center data-bind="text: error">Oops! Your inventory privacy settings is set to "Private". You need change it to "Public". (1)</center>
+                <!-- /ko -->
+                <!-- ko foreach: displayedItems --><!-- /ko -->
+            </div>
+        </section>
+
+        <section class="sell-items f-right">
+            <div class="results clearfix">
+                <div class="f-left">
+                    To sell: <span class="yellow"><strong data-bind="text: forSaleItemsCount">0</strong></span>
+                </div>
+                <div class="f-right">
+                    You'll get:
+                    <span class="green"><strong>$<span data-bind="text: forSaleItemsPrice">0.00</span> USD</strong></span>
+                </div>
+            </div>
+            <div class="items">
+                <!-- ko foreach: items --><!-- /ko -->
+            </div>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <div class="summary">
+            <a class="refill off" data-bind="css: {'off': !forSaleItemsCount()}, click: sell">Refill</a>
+            <p>Total: <span class="total">$<span data-bind="text: forSaleItemsPrice">0.00</span> USD</span></p>
+            <p>You will receive on <span>farmskins.com</span></p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container clearfix">
+        <div class="copy f-left">
+            Copyright (c) 2016-2018 SKIN2PAY <br><br> Powered by Steam, a registered trademark of Valve Corporation.
+            <br><br> Valve, the Valve logo, the Steam logo, Counter-Strike and the Counter-Strike logo are trademarks and/or registered trademarks of Valve Corporation. All other trademarks are property of their respective owners.
+            <br><br> Farmskins.com is in no way affiliated with or endorsed by Valve Corporation.
+        </div>
+        <div class="links f-right">
+            <div class="email">
+                support@farmskins.com
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- NOTIFICATION POPUP -->
+<div class="overlay-notif" id="NotifModel">
+    <div class="operation">
+        <span data-bind="html: text"></span>
+        <p class="waiting"></p>
+    </div>
+    <!-- ko if: resultShowing() --><!-- /ko -->
+</div>
+
+<!--POPUPS-->
+<div class="overlay">
+    <div class="popup-window anim">
+        <a href="#" class="close"></a>
+
+        <!--Support popup-->
+        <div class="pom-support">
+            <h3>Support</h3>
+            <p>If you have any problems or ideas please contact us via email<br>
+                <a href="mailto:contact@farmskins.com" title="contact@farmskins.com">contact@farmskins.com</a></p>
+        </div>
+
+        <!--FAQ popup-->
+        <div class="pom-faq clearfix">
+            <h3>FREQUENTLY ASKED QUESTIONS (FAQ)</h3>
+            <div class="faquetions">
+                <details>
+                    <summary>What is the Farmskins.com?</summary>
+                    <p>Farmskins.com its a site where you can open cases online, just like you would do it in CS:GO.<br> However, it's a lot cheaper to open cases on Farmskins.com than through CS:GO.<br> We also have a higher drop-rate for expensive skins and some exlusive cases.
+                    </p>
+                </details>
+                <details>
+                    <summary>How can I open a case?</summary>
+                    <p>Farmskins.com its a site where you can open cases online, just like you would do it in CS:GO.<br> However, it's a lot cheaper to open cases on Farmskins.com than through CS:GO.<br> We also have a higher drop-rate for expensive skins and some exlusive cases.
+                    </p>
+                </details>
+                <details>
+                    <summary>Where can I find my Steam Trade URL?</summary>
+                    <p>Farmskins.com its a site where you can open cases online, just like you would do it in CS:GO.<br> However, it's a lot cheaper to open cases on Farmskins.com than through CS:GO.<br> We also have a higher drop-rate for expensive skins and some exlusive cases.
+                    </p>
+                </details>
+                <details>
+                    <summary>How can i redeem my G2A code?</summary>
+                    <p>Farmskins.com its a site where you can open cases online, just like you would do it in CS:GO.<br> However, it's a lot cheaper to open cases on Farmskins.com than through CS:GO.<br> We also have a higher drop-rate for expensive skins and some exlusive cases.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- EXTERNAL SCRIPTS
+============================================= -->
+<!--<script src="/assets/js/jquery-3.1.1.min.js"></script>
+<script src="/assets/js/scripts.js"></script>-->
+
+<!--&lt;!&ndash;[if lt IE 9]>-->
+<!--<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
+<!--<script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>-->
+<!--<![endif]&ndash;&gt;-->
+
+<!--<script src="/assets/js/underscore.min.js"></script>
+<script src="/assets/js/knockout.min.js"></script>
+<script src="/assets/js/socket.io.min.js"></script>
+<script src="/assets/js/models/WebSocketModel.js?v=1560695172">nano </script>
+<script src="/assets/js/models/NotifModel.js?v=1567686623"></script>-->
+
+<!--<script>
+    window.notify = new NotifModel();
+    window.notify.init({});
+    ko.applyBindings(window.notify, document.getElementById("NotifModel"));
+    var socket = new WebSocketModel();
+    socket.init({
+        address: "wss://ws.skin2pay.com:8443?j9kQbySdLN4bjGibLLfs1zEQfyA4ylCXAoB491vigFoqV2AQyKywnuNauyNHI817"
+    });
+    window.socket = socket;
+    window.socket.addEventListener("test", function (msg) {
+        console.log(msg);
+    });
+    window.socket.addEventListener("status_changed", function (msg) {
+        switch (msg) {
+            case 2:
+                window.notify.show("Tradeoffer sent. Please accept incoming trade offer.");
+                break;
+            case 3:
+                window.notify.show("Tradeoffer confirmed. Check your farmskins balance.");
+                break;
+            case 6:
+                window.notify.show("Something went wrong.");
+                break;
+            case 7:
+                window.notify.show("You canceled tradeoffer.");
+                break;
+            default:
+                window.notify.show("Error occured.");
+                break;
+        }
+    });
+</script>-->
+
+<!--<script src="/assets/js/models/SellModel.js?v=1567686623"></script>-->
+
+<!--<script>
+    var sellModel = new SellModel();
+    sellModel.init({});
+    sellModel.loadInventory();
+    ko.applyBindings(sellModel, document.getElementById("SellModel"));
+</script>-->
+</body>
+</html>

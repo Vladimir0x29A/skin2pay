@@ -1,0 +1,7 @@
+/node_modules/
+/package-lock.json
+/build/main.css
+/build/index.html
+/build/scripts/
+/.idea/
+/style-source/css/main.css

@@ -1,0 +1,16 @@
+.container {
+  &--header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
+
+/*header {
+  .logo {
+    @media screen and (max-width: 639px) {
+      width: 180px;
+    }
+  }
+}*/
