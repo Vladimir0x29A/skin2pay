@@ -287,3 +287,47 @@ section {
     }
   }
 }
+
+
+.withdraw-history {
+  &__title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__row,
+  &__header {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    padding: 8px 0;
+  }
+
+  &__header {
+    border-radius: 8px 8px 0 0;
+    color: #ccc;
+    background: #0d131c;
+  }
+
+  &__row {
+    font-size: 14px;
+    color: #b3b3b3;
+    background: #111924;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #1b2738;
+    }
+
+    &:last-child {
+      border-radius: 0 0 8px 8px;
+    }
+  }
+
+  &__col {
+    width: 25%;
+    text-align: center;
+  }
+}
