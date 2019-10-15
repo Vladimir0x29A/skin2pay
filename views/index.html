@@ -40,12 +40,12 @@
             <img class="profile__avatar" src="/assets/images/bafdfcdde4901b9711cea086218fdbd031be3ccd_full.jpg" alt="avatar">
             <div class="profile__description">
                 <div class="profile__nickname">REN丶JOKER</div>
-                <div class="profile__balance">Your balance: <span class="profile__balance-span">$0.00 USD</span></div>
+                <div class="profile__balance">Your balance: <span class="profile__balance-span">$0.00&nbsp;USD</span></div>
             </div>
             <div class="profile__description profile__description--break-1">
-                <div class="profile__tradeoffer profile-tradeoffer">
-                    <input type="text" class="profile-tradeoffer__input" placeholder="Enter your trade URL">
-                    <button class="button--default button--input button--ml">Save</button>
+                <div class="profile__tradeoffer flex-wrapper flex-wrapper--center">
+                    <input type="text" class="profile-tradeoffer__input flex-wrapper__item" placeholder="Enter your trade URL">
+                    <button class="button--default button--input flex-wrapper__item">Save</button>
                 </div>
             </div>
             <div class="profile__description profile__description--break-1">
@@ -58,7 +58,7 @@
         </section>
 
         <section class="withdraw">
-            <div class="container-additional">
+            <div class="withdraw__container">
                 <div class="withdraw__title">Balance withdraw</div>
                 <div class="withdraw__methods withdraw-methods">
                     <div class="withdraw-methods__title">Choose withdraw method:</div>
@@ -81,17 +81,17 @@
                         </button>
                     </div>
                 </div>
-                <div class="withdraw__input-block">
-                    <input class="withdraw__input" type="text" placeholder="Input your wallet">
+                <div class="flex-wrapper flex-wrapper--center withdraw__input-block">
+                    <input class="withdraw__input flex-wrapper__item" type="text" placeholder="Input your wallet">
                 </div>
-                <div class="withdraw__input-block">
-                    <input class="withdraw__input" type="text" placeholder="Amount">
-                    <button class="button--default button--input button--ml">Withdraw</button>
+                <div class="flex-wrapper flex-wrapper--center withdraw__input-block">
+                    <input class="withdraw__input flex-wrapper__item" type="text" placeholder="Amount">
+                    <button class="button--default button--input flex-wrapper__item">Withdraw</button>
                 </div>
             </div>
         </section>
 
-        <section class="my-items f-left">
+        <!--<section class="my-items f-left">
             <div class="total clearfix">
                 <div class="f-left">
                     Count of items: <span class="yellow" data-bind="text: itemsCount">0</span>
@@ -108,10 +108,10 @@
                 </form>
             </div>
             <div class="items clearfix">
-                <!-- ko if: error() -->
+                &lt;!&ndash; ko if: error() &ndash;&gt;
                 <center data-bind="text: error">Oops! Your inventory privacy settings is set to "Private". You need change it to "Public". (1)</center>
-                <!-- /ko -->
-                <!-- ko foreach: displayedItems --><!-- /ko -->
+                &lt;!&ndash; /ko &ndash;&gt;
+                &lt;!&ndash; ko foreach: displayedItems &ndash;&gt;&lt;!&ndash; /ko &ndash;&gt;
             </div>
         </section>
 
@@ -126,7 +126,7 @@
                 </div>
             </div>
             <div class="items">
-                <!-- ko foreach: items --><!-- /ko -->
+                &lt;!&ndash; ko foreach: items &ndash;&gt;&lt;!&ndash; /ko &ndash;&gt;
             </div>
         </section>
 
@@ -136,7 +136,7 @@
             <a class="refill off" data-bind="css: {'off': !forSaleItemsCount()}, click: sell">Refill</a>
             <p>Total: <span class="total">$<span data-bind="text: forSaleItemsPrice">0.00</span> USD</span></p>
             <p>You will receive on <span>farmskins.com</span></p>
-        </div>
+        </div>-->
     </div>
 </main>
 
