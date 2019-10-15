@@ -36,141 +36,22 @@
 
 <main>
     <div class="container">
-        <section class="profile">
-            <img class="profile__avatar" src="/assets/images/bafdfcdde4901b9711cea086218fdbd031be3ccd_full.jpg" alt="avatar">
-            <div class="profile__description">
-                <div class="profile__nickname">REN丶JOKER</div>
-                <div class="profile__balance">Your balance: <span class="profile__balance-span">$0.00&nbsp;USD</span></div>
-            </div>
-            <div class="profile__description profile__description--break-1">
-                <div class="profile__tradeoffer flex-wrapper flex-wrapper--center">
-                    <input type="text" class="profile-tradeoffer__input flex-wrapper__item" placeholder="Enter your trade URL">
-                    <button class="button--default button--input flex-wrapper__item">Save</button>
-                </div>
-            </div>
-            <div class="profile__description profile__description--break-1">
-                <div class="profile__paragraph paragraph paragraph--info">
-                    Before you will open cases please verify that your TRADE OFFER URL is working properly and your inventory is open.
-                    <br>
-                    <a class="paragraph__link">View your trade offer URL</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="withdraw">
-            <div class="withdraw__container">
-                <div class="withdraw__title">Balance withdraw</div>
-                <div class="withdraw__methods withdraw-methods">
-                    <div class="withdraw-methods__title">Choose withdraw method:</div>
-                    <div class="withdraw-methods__methods">
-                        <button class="button--dark withdraw-methods__button withdraw-methods__button--fs"
-                                title="Your balance will be credited to Farmskins.com">
-                            <img src="/assets/images/logo_fs.png" alt="">
-                        </button>
-                        <button class="button--dark withdraw-methods__button">
-                            <img src="/assets/images/crypto-bitcoin.png" alt="">
-                        </button>
-                        <button class="button--dark withdraw-methods__button active">
-                            <img src="/assets/images/crypto-bitcoin-cash.png" alt="">
-                        </button>
-                        <button class="button--dark withdraw-methods__button">
-                            <img src="/assets/images/crypto-ethereum.png" alt="">
-                        </button>
-                        <button class="button--dark withdraw-methods__button">
-                            <img src="/assets/images/crypto-litecoin.png" alt="">
-                        </button>
+        <section class="main-section">
+            <div class="columner-main">
+                <div class="columner-main__item">
+                    <div class="main-section__title">Представляем Skin2Pay</div>
+                    <div class="main-section__description">
+                        <div class="main-section__paragraph">Совершенно новая, быстро развивающаяся платёжная система, использующая предметы Steam в качестве валюты.</div>
+                        <div class="main-section__paragraph">Попробуйте и Вы поймете насколько это удобно.</div>
+                        <div class="main-section__paragraph">Новая услуга! Оптовая скупка скинов.</div>
                     </div>
+                    <button class="button--default main-section__button">Продать скины</button>
                 </div>
-                <div class="flex-wrapper flex-wrapper--center withdraw__input-block">
-                    <input class="withdraw__input flex-wrapper__item" type="text" placeholder="Input your wallet">
-                </div>
-                <div class="flex-wrapper flex-wrapper--center withdraw__input-block">
-                    <input class="withdraw__input flex-wrapper__item" type="text" placeholder="Amount">
-                    <button class="button--default button--input flex-wrapper__item">Withdraw</button>
+                <div class="columner-main__item">
+                    <img class="main-section__screenshot" src="/assets/images/skin2pay.png" alt="">
                 </div>
             </div>
         </section>
-
-        <section class="withdraw-history">
-            <div class="withdraw-history__title">Withdraw history</div>
-            <div class="withdraw-history__header">
-                <div class="withdraw-history__col">Amount</div>
-                <div class="withdraw-history__col">Date</div>
-                <div class="withdraw-history__col">Status</div>
-                <div class="withdraw-history__col">Where were withdrawn</div>
-            </div>
-            <div class="withdraw-history__row">
-                <div class="withdraw-history__col">
-                    <span class="withdraw-history__amount">666</span>
-                </div>
-                <div class="withdraw-history__col">11.09.2001</div>
-                <div class="withdraw-history__col">Failed</div>
-                <div class="withdraw-history__col">Ethereum</div>
-            </div>
-            <div class="withdraw-history__row">
-                <div class="withdraw-history__col">
-                    <span class="withdraw-history__amount withdraw-history__amount--up">777</span>
-                </div>
-                <div class="withdraw-history__col">11.09.1989</div>
-                <div class="withdraw-history__col">Success</div>
-                <div class="withdraw-history__col">Bitcoin</div>
-            </div>
-            <div class="withdraw-history__row">
-                <div class="withdraw-history__col">
-                    <span class="withdraw-history__amount">13</span>
-                </div>
-                <div class="withdraw-history__col">22.06.1945</div>
-                <div class="withdraw-history__col">Failed</div>
-                <div class="withdraw-history__col">Farmskins</div>
-            </div>
-        </section>
-
-        <!--<section class="my-items f-left">
-            <div class="total clearfix">
-                <div class="f-left">
-                    Count of items: <span class="yellow" data-bind="text: itemsCount">0</span>
-                </div>
-                <div class="f-right">
-                    Total price: <span class="green">$<span data-bind="text: itemsPrice">0.00</span> USD</span>
-                </div>
-            </div>
-            <div class="search clearfix">
-                <form action="#">
-                    <div class="f-left">
-                        <input type="text" placeholder="Search items..." data-bind="textInput: searchText">
-                    </div>
-                </form>
-            </div>
-            <div class="items clearfix">
-                &lt;!&ndash; ko if: error() &ndash;&gt;
-                <center data-bind="text: error">Oops! Your inventory privacy settings is set to "Private". You need change it to "Public". (1)</center>
-                &lt;!&ndash; /ko &ndash;&gt;
-                &lt;!&ndash; ko foreach: displayedItems &ndash;&gt;&lt;!&ndash; /ko &ndash;&gt;
-            </div>
-        </section>
-
-        <section class="sell-items f-right">
-            <div class="results clearfix">
-                <div class="f-left">
-                    To sell: <span class="yellow"><strong data-bind="text: forSaleItemsCount">0</strong></span>
-                </div>
-                <div class="f-right">
-                    You'll get:
-                    <span class="green"><strong>$<span data-bind="text: forSaleItemsPrice">0.00</span> USD</strong></span>
-                </div>
-            </div>
-            <div class="items">
-                &lt;!&ndash; ko foreach: items &ndash;&gt;&lt;!&ndash; /ko &ndash;&gt;
-            </div>
-        </section>
-
-        <div class="clearfix"></div>
-
-        <div class="summary">
-            <a class="refill off" data-bind="css: {'off': !forSaleItemsCount()}, click: sell">Refill</a>
-            <p>Total: <span class="total">$<span data-bind="text: forSaleItemsPrice">0.00</span> USD</span></p>
-            <p>You will receive on <span>farmskins.com</span></p>
-        </div>-->
     </div>
 </main>
 

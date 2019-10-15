@@ -1,3 +1,17 @@
+@mixin width_col($item_count, $margin) {
+  @if $margin == 0 {
+    width: floor(10000% / $item_count) / 100;
+  }
+  @else {
+    width: calc(#{floor(10000% / $item_count) / 100} - #{$margin * 2});
+  }
+}
+
+
+
+
+
+
 button {
   border: none;
   padding: 0;
@@ -354,5 +368,82 @@ section {
         transform: none;
       }
     }
+  }
+}
+
+
+.main-section {
+  &__title {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    //text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    //text-align: center;
+    font-size: 16px;
+    color: #b3b3b3;
+  }
+
+  &__paragraph {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__button {
+    min-height: 30px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__screenshot {
+    max-width: 100%;
+  }
+}
+
+.columner-main {
+  $margin: 10px;
+  $margin-2: 7px;
+
+  display: flex;
+  align-items: center;
+  //flex-wrap: wrap;
+  margin: (-$margin * 2) (-$margin) 0;
+
+  /*@media (max-width: 1599px) {
+    margin: (-$margin-2 * 2) (-$margin-2) 0;
+  }
+
+  @media (max-width: 1279px) {
+    margin: (-$margin * 2) (-$margin) 0;
+  }*/
+
+  &__item {
+    @include width_col(2, $margin);
+    margin: ($margin * 2) $margin 0;
+
+    /*@media (max-width: 1599px) {
+      @include width_col(5, $margin-2);
+      margin: ($margin-2 * 2) $margin-2 0;
+    }
+
+    @media (max-width: 1279px) {
+      @include width_col(4, $margin);
+      margin: ($margin * 2) $margin 0;
+    }
+
+    @media (max-width: 979px) {
+      @include width_col(3, $margin);
+    }
+
+    @media (max-width: 719px) {
+      @include width_col(2, $margin);
+    }*/
   }
 }
