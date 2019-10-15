@@ -333,22 +333,24 @@ section {
 
   &__amount {
     position: relative;
+    padding-left: 26px;
+    padding-right: 4px;
 
     &::before {
       content: '';
       position: absolute;
       top: -2px;
-      left: -30px;
+      left: 0;
       width: 20px;
       height: 20px;
-      background: url("assets/images/ico-arrow-rate-down.svg");
+      background: url("assets/images/ico-arrow-rate-up.svg");
       background-size: 100% 100%;
       transform: scaleY(-1);
     }
 
     &--up {
       &::before {
-        background-image: url("assets/images/ico-arrow-rate-up.svg");
+        background-image: url("assets/images/ico-arrow-rate-down.svg");
         transform: none;
       }
     }
