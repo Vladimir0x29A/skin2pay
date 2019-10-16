@@ -560,3 +560,59 @@ section {
     text-align: center;
   }
 }
+
+.m-user {
+  display: flex;
+  align-items: center;
+  max-width: 270px;
+
+  &:hover {
+    img {
+      filter: none;
+    }
+
+    .m-user__balance {
+      color: white;
+    }
+  }
+
+  &__img {
+    border-radius: 50%;
+  }
+
+  &__label {
+    display: block;
+    line-height: 1;
+  }
+
+  &__container {
+    width: calc(100% - 40px);
+    text-align: left;
+
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
+  }
+
+  &__balance,
+  &__name {
+    transition: filter .2s;
+  }
+
+  &__name {
+    max-width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__balance {
+    font-size: 18px;
+    font-weight: 700;
+    color: #7db03a;
+    transition: color .2s;
+  }
+}
