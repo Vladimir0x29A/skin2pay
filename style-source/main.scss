@@ -345,12 +345,26 @@ section {
     align-items: center;
     min-height: 50px;
     padding: 8px 0;
+
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      align-items: stretch;
+      max-width: 300px;
+      padding-right: 8px;
+      padding-left: 8px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__header {
     border-radius: 8px 8px 0 0;
     color: #ccc;
     background: #0d131c;
+
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
   }
 
   &__row {
@@ -365,17 +379,34 @@ section {
     &:last-child {
       border-radius: 0 0 8px 8px;
     }
+
+    &:nth-child(3) {
+      @media screen and (max-width: 500px) {
+        border-radius: 8px 8px 0 0;
+      }
+    }
   }
 
   &__col {
     width: 25%;
     text-align: center;
+
+    @media screen and (max-width: 500px) {
+      display: flex;
+      justify-content: space-between;
+      width: auto;
+      line-height: 1.5;
+    }
   }
 
   &__amount {
     position: relative;
     padding-left: 26px;
     padding-right: 4px;
+
+    @media screen and (max-width: 500px) {
+      padding-right: 0;
+    }
 
     &::before {
       content: '';
@@ -387,6 +418,10 @@ section {
       background: url("assets/images/ico-arrow-rate-up.svg");
       background-size: 100% 100%;
       transform: scaleY(-1);
+
+      @media screen and (max-width: 500px) {
+        top: 1px;
+      }
     }
 
     &--up {
@@ -394,6 +429,16 @@ section {
         background-image: url("assets/images/ico-arrow-rate-down.svg");
         transform: none;
       }
+    }
+  }
+
+  &__span-title {
+    display: none;
+
+    @media screen and (max-width: 500px) {
+      display: initial;
+      font-weight: 700;
+      color: #a3b0c2;
     }
   }
 }
