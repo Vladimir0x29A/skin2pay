@@ -11,6 +11,7 @@ async function connectTask(done) {
     await connect.server({
         root: 'build',
         port: 8091,
+        index: 'profile.html',
         livereload: true
     }, function () {
         this.server.on('close', done);
@@ -18,7 +19,8 @@ async function connectTask(done) {
 }
 
 function reloadTask(done) {
-    src('views/index.html')
+    // src('views/index.html')
+    src('views/profile.html')
         .pipe(stripComments())
         .pipe(dest('build'))
         .pipe(connect.reload());
@@ -60,7 +62,7 @@ async function watchTask() {
     // gulp.watch('scripts-source/!*.js', ['js']);
     // gulp.watch('build/img/!*.*', ['reload']);
     // gulp.watch('build/fonts/!*.*', ['reload']);
-    await watch('views/index.html', reloadTask);
+    await watch('views/*.html', reloadTask);
     // await watch('scripts-source/scripts.js', jsTask);
 }
 
