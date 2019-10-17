@@ -101,7 +101,7 @@ h4 {
     clear: both;
 }
 
-a {
+a:not(.button):not(.custom) {
     text-decoration: none;
     color: #fff;
     -webkit-transition: all 200ms ease-in-out;
@@ -111,7 +111,7 @@ a {
     transition: all 200ms ease-in-out;
 }
 
-a:hover {
+a:not(.button):not(.custom):hover {
     color: #e5c33d;
 }
 
@@ -276,7 +276,7 @@ header {
     width: 100%;
     background: #151d28;
     height: 100px;
-    line-height: 100px;
+    /*line-height: 100px;*/
     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
@@ -289,48 +289,6 @@ header .logo img {
     width: 100%;
     max-width: 277px;
     vertical-align: middle;
-}
-
-header nav {
-    display: inline-block;
-}
-
-header nav a {
-    display: inline-block;
-    border-radius: 5px;
-    background: #1b2433;
-    padding: 0 20px;
-    margin-left: 25px;
-    line-height: 60px;
-    vertical-align: middle;
-    color: #e5c33d;
-    font-weight: 500;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    font-size: 14px;
-}
-
-header nav a:hover {
-    background: #273346;
-    color: #fff;
-}
-
-header nav a img {
-    height: 40px;
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-header nav a.url {
-    padding: 0 15px;
-}
-
-header nav a.url img {
-    margin: 0;
-}
-
-header nav a:hover img {
-    filter: grayscale(100%) brightness(300%);
 }
 
 main {
@@ -978,10 +936,6 @@ footer .email {
         margin-bottom: 20px;
     }
 
-    header nav {
-        text-align: center;
-    }
-
     main section.inner .url-form .verify {
         display: block;
         margin: 0 auto;
@@ -1019,16 +973,6 @@ footer .email {
 
     .overlay-notif .result {
         min-width: calc(100% - 20px);
-    }
-}
-
-@media (max-width: 500px ) {
-    header nav a {
-        font-size: 0;
-    }
-
-    header nav a img {
-        margin-right: 0;
     }
 }
 

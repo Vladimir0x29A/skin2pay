@@ -27,9 +27,32 @@
 <header>
     <div class="container container--header">
         <div class="logo"><a href="#"><img src="/assets/images/logo.png" alt=""></a></div>
-        <nav class="">
-            <a href="#" class="m-support"><img src="/assets/images/ico-support.png" alt="">Support</a>
-            <a href="#" class="m-support"><img src="/assets/images/ico-steam.png" alt="">Sign in through STEAM</a>
+        <nav class="navigation">
+            <a href="#" class="button button--dark navigation__button navigation__stream">
+                <span class="navigation__button-span button__span">
+                    <img class="navigation__icon" src="/assets/images/ico-support.png" alt="">
+                    <span class="navigation__label navigation__hiddable">Support</span>
+                </span>
+            </a>
+            <a href="#" class="button button--dark navigation__button navigation__stream">
+                <span class="navigation__button-span button__span">
+                    <img class="navigation__icon" src="/assets/images/ico-steam.png" alt="">
+                    <span class="navigation__label navigation__label--green navigation__hiddable">Sign in through STEAM</span>
+                </span>
+            </a>
+            <!--<div class="navigation__stream navigation__user-container">
+                <a href="#" class="button button&#45;&#45;dark navigation__button navigation__button&#45;&#45;user">
+                    <span class="navigation__button-span button__span">
+                        <img class="navigation__icon navigation__icon&#45;&#45;avatar"
+                             src="/assets/images/bafdfcdde4901b9711cea086218fdbd031be3ccd_full.jpg" alt="">
+                        <span class="user-button-container navigation__hiddable">
+                            <span class="user-button-container__label user-button-container__name">Username Username</span>
+                            <span class="user-button-container__label user-button-container__balance">$0.00</span>
+                        </span>
+                    </span>
+                </a>
+                <a href="#" class="user-button-container__logout custom"></a>
+            </div>-->
         </nav>
     </div>
 </header>
@@ -39,20 +62,27 @@
         <section class="profile">
             <img class="profile__avatar" src="/assets/images/bafdfcdde4901b9711cea086218fdbd031be3ccd_full.jpg" alt="avatar">
             <div class="profile__description">
-                <div class="profile__nickname">REN丶JOKER</div>
+                <div class="profile__head">
+                    <div class="profile__nickname">REN丶JOKER</div>
+                    <a href="#" class="button button--yellow button--input">
+                        <span class="button__span">Sell items</span>
+                    </a>
+                </div>
                 <div class="profile__balance">Your balance: <span class="profile__balance-span">$0.00&nbsp;USD</span></div>
             </div>
             <div class="profile__description profile__description--break-1">
                 <div class="profile__tradeoffer flex-wrapper flex-wrapper--center">
                     <input type="text" class="profile-tradeoffer__input flex-wrapper__item" placeholder="Enter your trade URL">
-                    <button class="button--default button--input flex-wrapper__item">Save</button>
+                    <button class="button button--default button--input flex-wrapper__item">
+                        <span class="button__span">Save</span>
+                    </button>
                 </div>
             </div>
             <div class="profile__description profile__description--break-1">
                 <div class="profile__paragraph paragraph paragraph--info">
                     Before you will open cases please verify that your TRADE OFFER URL is working properly and your inventory is open.
                     <br>
-                    <a class="paragraph__link">View your trade offer URL</a>
+                    <a class="paragraph__link custom">View your trade offer URL</a>
                 </div>
             </div>
         </section>
@@ -63,21 +93,35 @@
                 <div class="withdraw__methods withdraw-methods">
                     <div class="withdraw-methods__title">Choose withdraw method:</div>
                     <div class="withdraw-methods__methods">
-                        <button class="button--dark withdraw-methods__button withdraw-methods__button--fs"
+                        <button class="button button--dark withdraw-methods__button withdraw-methods__button--fs"
                                 title="Your balance will be credited to Farmskins.com">
-                            <img src="/assets/images/logo_fs.png" alt="">
+                            <span class="button__span withdraw-methods__button-span">
+                                <img src="/assets/images/logo_fs.png" alt="">
+                            </span>
                         </button>
-                        <button class="button--dark withdraw-methods__button">
-                            <img src="/assets/images/crypto-bitcoin.png" alt="">
+                        <button class="button button--dark withdraw-methods__button">
+                            <span class="button__span withdraw-methods__button-span">
+                                <img src="/assets/images/crypto-bitcoin.png" alt="bitcoin">
+                                <span class="withdraw-methods__button-label">Bitcoin</span>
+                            </span>
                         </button>
-                        <button class="button--dark withdraw-methods__button active">
-                            <img src="/assets/images/crypto-bitcoin-cash.png" alt="">
+                        <button class="button button--dark withdraw-methods__button active">
+                            <span class="button__span withdraw-methods__button-span">
+                                <img src="/assets/images/crypto-bitcoin-cash.png" alt="bitcoin-cash">
+                                <span class="withdraw-methods__button-label">Bitcoin Cash</span>
+                            </span>
                         </button>
-                        <button class="button--dark withdraw-methods__button">
-                            <img src="/assets/images/crypto-ethereum.png" alt="">
+                        <button class="button button--dark withdraw-methods__button">
+                            <span class="button__span withdraw-methods__button-span">
+                                <img src="/assets/images/crypto-ethereum.png" alt="ethereum">
+                                <span class="withdraw-methods__button-label">Ethereum</span>
+                            </span>
                         </button>
-                        <button class="button--dark withdraw-methods__button">
-                            <img src="/assets/images/crypto-litecoin.png" alt="">
+                        <button class="button button--dark withdraw-methods__button">
+                            <span class="button__span withdraw-methods__button-span">
+                                <img src="/assets/images/crypto-litecoin.png" alt="litecoin">
+                                <span class="withdraw-methods__button-label">Litecoin</span>
+                            </span>
                         </button>
                     </div>
                 </div>
@@ -86,7 +130,9 @@
                 </div>
                 <div class="flex-wrapper flex-wrapper--center withdraw__input-block">
                     <input class="withdraw__input flex-wrapper__item" type="text" placeholder="Amount">
-                    <button class="button--default button--input flex-wrapper__item">Withdraw</button>
+                    <button class="button button--default button--input flex-wrapper__item">
+                        <span class="button__span">Withdraw</span>
+                    </button>
                 </div>
             </div>
         </section>

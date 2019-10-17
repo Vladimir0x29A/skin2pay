@@ -27,15 +27,32 @@
 <header>
     <div class="container container--header">
         <div class="logo"><a href="#"><img src="/assets/images/logo.png" alt=""></a></div>
-        <nav class="">
-            <a href="#" class="m-support"><img src="/assets/images/ico-support.png" alt="">Support</a>
-            <a href="#" class="m-user">
-                <img class="m-user__img" src="/assets/images/bafdfcdde4901b9711cea086218fdbd031be3ccd_full.jpg" alt="">
-                <span class="m-user__container">
-                    <span class="m-user__label m-user__name">Username Username</span>
-                    <span class="m-user__label m-user__balance">$0.00</span>
+        <nav class="navigation">
+            <a href="#" class="button button--dark navigation__button navigation__stream">
+                <span class="navigation__button-span button__span">
+                    <img class="navigation__icon" src="/assets/images/ico-support.png" alt="">
+                    <span class="navigation__label navigation__hiddable">Support</span>
                 </span>
             </a>
+            <!--<a href="#" class="button button&#45;&#45;dark navigation__button navigation__stream">
+                <span class="navigation__button-span button__span">
+                    <img class="navigation__icon" src="/assets/images/ico-steam.png" alt="">
+                    <span class="navigation__label navigation__label&#45;&#45;green navigation__hiddable">Sign in through STEAM</span>
+                </span>
+            </a>-->
+            <div class="navigation__stream navigation__user-container">
+                <a href="#" class="button button--dark navigation__button navigation__button--user">
+                    <span class="navigation__button-span button__span">
+                        <img class="navigation__icon navigation__icon--avatar"
+                             src="/assets/images/bafdfcdde4901b9711cea086218fdbd031be3ccd_full.jpg" alt="">
+                        <span class="user-button-container navigation__hiddable">
+                            <span class="user-button-container__label user-button-container__name">Username Username</span>
+                            <span class="user-button-container__label user-button-container__balance">$0.00</span>
+                        </span>
+                    </span>
+                </a>
+                <a href="#" class="user-button-container__logout custom"></a>
+            </div>
         </nav>
     </div>
 </header>
@@ -51,7 +68,9 @@
                         <div class="main-section__paragraph">Попробуйте и Вы поймете насколько это удобно.</div>
                         <div class="main-section__paragraph">Новая услуга! Оптовая скупка скинов.</div>
                     </div>
-                    <button class="button--default main-section__button">Продать скины</button>
+                    <button class="button button--yellow button--input main-section__button">
+                        <span class="button__span">Продать скины</span>
+                    </button>
                 </div>
                 <div class="columner-main__item main-section__img-block">
                     <img class="main-section__screenshot" src="/assets/images/skin2pay4.png" alt="">
